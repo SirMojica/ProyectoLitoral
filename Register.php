@@ -35,8 +35,8 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         $name = $conexion->real_escape_string($_POST['name']);
         $username = $conexion->real_escape_string($_POST['username']);
         $password = $conexion->real_escape_string($_POST['password']);
-        $password_hash = password_hash($password, PASSWORD_DEFAULT, ['cost' => 10]);
-        $insertar = "INSERT INTO `usuario` (`Id`, `Name`, `Username`, `Password`, `Photo`, `Rol`) VALUES (NULL, '$name', '$username', '$password_hash', 0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000, '3')";
+        //$password_hash = password_hash($password, PASSWORD_DEFAULT, ['cost' => 10]);
+        $insertar = "INSERT INTO `usuario` (`Id`, `Name`, `Username`, `Password`, `Photo`, `Rol`) VALUES (NULL, '$name', '$username', '$password', 0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000, '3')";
         $guardar = mysqli_query($conexion, $insertar);
         if ($guardar) {
             echo "<h3>¡Te has registrado correctamente! </h3>";
