@@ -4,22 +4,23 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Login</title>
+    <title>Registrate</title>
 </head>
 <body>
     <main>
         <div class="principal-container">
-            <h1>Login</h1>
-            <form action="Login.php" method="post">
+            <h1>Registrate</h1>
+            <form action="../Register.php" method="POST">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required>
                 <label for="username">Username</label>
                 <input type="text" id="username" name="username" required>
                 <label for="password">password</label>
                 <input type="password" id="password" name="password" required>
-                <input type="submit" value="Login">
+                <input type="submit" value="register">
             </form>
         </div>
     </main>
-    <a href="layouts/register.html">¡Registrate aqui!</a>
+    
 </body>
 </html>
